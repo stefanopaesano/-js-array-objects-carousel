@@ -26,27 +26,97 @@ const images = [
     },
   ];
 
- const carouselInner = document.getElementById('carousel-inner');
+//  const carouselInner = document.getElementById('carousel-inner');
 
-  // Popola il carosello con gli elementi dell'array
-  images.forEach(function (image, index) {
-    var carouselItem = document.createElement('div');
-    carouselItem.classList.add('carousel-item');
+//  let itemContent = '';
 
-    if (index === 0) {
-      carouselItem.classList.add('active');
-    }
+//   // Popola il carosello con gli elementi dell'array
+//   for(let i = 0; i < items.length; i++){
+//     itemContent += 
+    
+//     `<div class="item">
+//         <img src="${images[i].url}">
+//         <div class="item-description">
+//             <h2>${images[i].title}</h2>
+//             <p>${images[i].description}</p>
+//         </div>
+//     </div>`
+// };
 
-    carouselItem.innerHTML = `
-      <img src="${image.url}" alt="${image.title}">
-      <div class="carousel-caption">
-        <h5>${image.title}</h5>
-        <p>${image.description}</p>
-      </div>
-    `;
 
-    carouselInner.appendChild(carouselItem);
-  });
+
+// const itemsSlider = document.querySelector('.carousel-inner').innerHTML = itemContent;
+
+//   const items = document.getElementsByClassName('items')
+
+//   let next = document.querySelector('#mybutton-next')
+//   let back = document.querySelector('#mybutton-back')
+
+//   let counter = 0;
+
+// items[counter].classList.add('active');
+
+
+
+// function showNext() {
+
+//     items[counter].classList.remove('active');
+
+//     if (counter != items.length -1){
+//       counter++;
+//     }
+//     else {
+//       counter = 0;
+//     }
+  
+//     items[counter].classList.add('active');
+    
+// }
+const carouselInner = document.querySelector('.carousel-inner');
+let itemContent = '';
+
+// Popola il carosello con gli elementi dell'array
+for (let i = 0; i < images.length; i++) {
+  itemContent +=
+    `<div class="item">
+        <img src="${images[i].url}">
+        <div class="item-description">
+            <h2>${images[i].title}</h2>
+            <p>${images[i].description}</p>
+        </div>
+    </div>`;
+}
+
+carouselInner.innerHTML = itemContent;
+
+const items = document.getElementsByClassName('item');
+let next = document.querySelector('.mybutton-next');
+let back = document.querySelector('.mybutton-back');
+let counter = 0;
+
+items[counter].classList.add('active');
+
+next.addEventListener('click', function() {
+  items[counter].classList.remove('active');
+
+  if (counter != images.length - 1) {
+    counter++;
+  } else {
+    counter = 0;
+  }
+
+  items[counter].classList.add('active');
+
+});
+ 
+
+
+
+
+
+
+
+   
 
 
  

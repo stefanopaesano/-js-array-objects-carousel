@@ -2,19 +2,35 @@ div{
     border: 1px solid red;
 }
 
-#carousel-container {
-    width: 80%;
+/* #carousel-container {
+    width: 1000px;
     margin: auto;
     overflow: hidden;
+  } */
+
+  .carousel-inner {
+    width: 1000px;
+    height: 1000px;
   }
 
   .carousel-item {
-    min-width: 100%;
+    width: 100%;
+    height: 1000px;
     box-sizing: border-box;
   }
 
   /* Stili delle immagini */
-  .carousel-item img {
+  .items img {
     width: 100%;
-    height: auto;
+   
+  }
+
+  .items{
+    display: none;
+    width: 1000px;
+    height: 1000px;
+  }
+
+  .items.active{
+    display: block;
   }
