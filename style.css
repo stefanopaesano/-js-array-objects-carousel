@@ -1,0 +1,20 @@
+div{
+    border: 1px solid red;
+}
+
+#carousel-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Stili delle immagini */
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
