@@ -97,9 +97,11 @@ let counter = 0;
 items[counter].classList.add('active');
 
 next.addEventListener('click', function() {
-  items[counter].classList.remove('active');
 
-  if (counter != images.length - 1) {
+
+  items[counter].classList.remove('active');
+  
+  if (counter < items.length - 1) {
     counter++;
   } else {
     counter = 0;
@@ -109,6 +111,21 @@ next.addEventListener('click', function() {
 
 });
  
+back.addEventListener('click', function() {
+
+
+    items[counter].classList.remove('active');
+    
+    if (counter > 0) {
+      counter--;
+    } else {
+      counter = items.length -1;
+    }
+  
+    items[counter].classList.add('active');
+  
+  });
+   
 
 
 
